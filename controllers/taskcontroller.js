@@ -1,5 +1,5 @@
 const AppConstant = require("../common/appconstants");
-const Task = require('../models/Task');
+const Task = require('../models/tasks');
 
 // Create a new task
 exports.createTask = async(req, res) => {
