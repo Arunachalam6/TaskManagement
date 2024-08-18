@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "routes/**/*.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/routes/$1"
+      },
+      {
+        "src": "/author(.*)",
+        "dest": "/server.js"
+      }
+    ],
+    "env": {
+      "MONGO_URI": "mongodb://127.0.0.1:27017/TaskManagement",
+      "JWT_SECRET": "Task_Management",
+      "PORT": "5000",
+      "AUTHOR_NAME": "Arunachalam S",
+      "GITHUB_URL":"https://github.com/Arunachalam6/project-assesment-test"
+    }
+  }
+  
